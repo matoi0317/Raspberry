@@ -9,10 +9,11 @@ Led_pin = 18                        #変数"Led_pin"に18を格納
 GPIO.setmode(GPIO.BCM)              #GPIOのモードを"GPIO.BCM"に設定
 GPIO.setup(Led_pin, GPIO.OUT)       #GPIO18を出力モードに設定
 
-#GPIOの電圧を制御
-GPIO.output(Led_pin, GPIO.HIGH)     #GPIO18の出力をHigh(3.3V)にする
-time.sleep(5)                       #5秒間待つ
-GPIO.output(Led_pin, GPIO.LOW)      #GPIO18の出力をLow(0V)にする
+#for文で5回繰り返す
+for i in range(5):
+    GPIO.output(Led_pin, GPIO.HIGH)     #GPIO18の出力をHigh(3.3V)にする
+    time.sleep(0.5)                     #5秒間待つ
+    GPIO.output(Led_pin, GPIO.LOW)      #GPIO18の出力をLow(0V)にする
+    time.sleep(0.5)                     #5秒間待つ
 
-#GPIOをクリーンアップ
 GPIO.cleanup()
