@@ -3,8 +3,8 @@ import time                         #時間制御用のモジュールをイン�
 import sys                          #sysモジュールをインポート
 
 #ポート番号の定義
-Trig = 9                          #変数"Trig"に27を代入
-Echo = 13                           #変数"Echo"に18を代入
+Trig = 17                     #変数"Trig"に27を代入
+Echo = 27                           #変数"Echo"に18を代入
 
 #GPIOの設定
 GPIO.setmode(GPIO.BCM)              #GPIOのモードを"GPIO.BCM"に設定
