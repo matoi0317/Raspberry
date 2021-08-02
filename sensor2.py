@@ -4,8 +4,8 @@ from gpiozero.pins.pigpio import PiGPIOFactory
 import time
 
 # HC SR04の使用するピン
-PIN_TRIG = 22
-PIN_ECHO = 27
+PIN_TRIG = 13
+PIN_ECHO = 15
 
 def main():
     # ピン設定
