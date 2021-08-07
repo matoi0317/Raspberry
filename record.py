@@ -7,4 +7,5 @@ proc.wait(5)
 r = sr.Recognizer()
 with sr.AudioFile("test3.wav") as source:
     audio = r.record(source)
-print("You said: \n[" + r.recognize_google(audio) + "]")
+text = r.recognize_google(audio, language="ja-JP")
+print(text)
