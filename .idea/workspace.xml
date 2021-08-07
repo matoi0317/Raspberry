@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a80fbecf-1fc8-498e-ba7c-bccd15ccb4df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/record.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -64,10 +65,10 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state x="494" y="188" key="FileChooserDialogImpl/0.23.1440.805@0.23.1440.805" timestamp="1627107370899" />
-    <state x="303" y="63" key="SettingsEditor" timestamp="1627711018409">
+    <state x="303" y="63" key="SettingsEditor" timestamp="1628315754795">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
-    <state x="303" y="63" key="SettingsEditor/0.23.1440.805@0.23.1440.805" timestamp="1627711018409" />
+    <state x="303" y="63" key="SettingsEditor/0.23.1440.805@0.23.1440.805" timestamp="1628315754795" />
     <state x="365" y="184" width="683" height="486" key="find.popup" timestamp="1627103106132">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
