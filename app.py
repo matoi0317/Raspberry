@@ -10,7 +10,7 @@ LEDPINS = {"1":23, "2":24, "3":25}
 app = Flask(__name__)
 
 # 「/」にアクセスしたときの処理
-@app.route("/")
+@app.route("/test")
 def index():
     def changepinstate():
         app.logger.debug(request.method)
