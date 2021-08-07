@@ -12,21 +12,18 @@ app = Flask(__name__)
 # 「/」にアクセスしたときの処理
 @app.route("/")
 def index():
-    return render_template("test.vue")
+    def changepinstate():
+        app.logger.debug(request.method)
+        if "POST" == request.method:
+            pin = request.form["pin"]
+            state = request.form["state"]
+            app.logger.debug("pin = " + pin)
+            app.logger.debug("pin type = " + str(type(pin)))
+            app.logger.debug("state = " + state)
+            app.logger.debug("state type = " + str(type(state)))
+            GPIO.output(LEDPINS[pin], int(state))
+        return ""
 
-# 「/changepinstate」にアクセスしたときの処理
-@app.route("/changepinstate", methods=["POST"])
-def changepinstate():
-    app.logger.debug(request.method)
-    if "POST" == request.method:
-        pin   = request.form["pin"]
-        state = request.form["state"]
-        app.logger.debug("pin = " + pin)
-        app.logger.debug("pin type = " + str(type(pin)))
-        app.logger.debug("state = " + state)
-        app.logger.debug("state type = " + str(type(state)))
-        GPIO.output(LEDPINS[pin], int(state))
-    return ""
 
 # 「Ctrl + C」による終了時の処理
 def sigint_handler(signal, frame):
