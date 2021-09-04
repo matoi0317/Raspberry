@@ -1,4 +1,5 @@
 "指定した時間に音楽を鳴らす→録音"
+from .Create_pdf import Create_pdf
 import speech_recognition as sr
 import datetime
 import time
@@ -35,3 +36,5 @@ with sr.AudioFile("wakeup.wav") as source:
 text2 = r.recognize_google(audio2, language="ja-JP")
 print("ご飯を食べましたか？＞＞"+text)
 print("何時に起きましたか？>>"+text2)
+
+Create_pdf(text, text2)

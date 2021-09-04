@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a80fbecf-1fc8-498e-ba7c-bccd15ccb4df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/music.py" beforeDir="false" afterPath="$PROJECT_DIR$/music.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,10 +58,10 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state x="391" y="238" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.805@0.23.1440.805" timestamp="1630310971962" />
-    <state x="701" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626162417842">
+    <state x="701" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1630737248918">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
-    <state x="701" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.805@0.23.1440.805" timestamp="1626162417842" />
+    <state x="701" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.805@0.23.1440.805" timestamp="1630737248918" />
     <state x="494" y="188" key="FileChooserDialogImpl" timestamp="1627107370899">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
