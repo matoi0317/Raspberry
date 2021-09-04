@@ -7,7 +7,7 @@ mmm = int(input())
 count = 5
 i = 1
 a1 = 'mpg123 -a hw:2,0 food.mp3'
-a2 = 'arecord -D plughw:0,0 -d 10 -f cd test3.wav'
+a2 = 'arecord -D plughw:0,0 -d 10 -f cd food.wav'
 while i < 2:
     n = datetime.datetime.now()
     nm = n.minute
@@ -19,7 +19,7 @@ while i < 2:
         i += 1
 
 r = sr.Recognizer()
-with sr.AudioFile("test3.wav") as source:
+with sr.AudioFile("food.wav") as source:
     audio = r.record(source)
 text = r.recognize_google(audio, language="ja-JP")
 print(text)
