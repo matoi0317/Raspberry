@@ -1,5 +1,5 @@
-"指定した時間に音楽を鳴らす→録音"
-from .Create_pdf import Create_pdf
+# coding: utf-8
+from functions.Create_pdf import Create_pdf
 import speech_recognition as sr
 import datetime
 import time
