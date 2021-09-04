@@ -6,7 +6,7 @@ import subprocess
 mmm = int(input())
 count = 5
 i = 1
-a1 = 'mpg123 -a hw:2,0 free.mp3'
+a1 = 'mpg123 -a hw:2,0 food.mp3'
 a2 = 'arecord -D plughw:0,0 -d 10 -f cd test3.wav'
 while i < 2:
     n = datetime.datetime.now()
