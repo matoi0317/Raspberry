@@ -1,5 +1,5 @@
-"指定した時間に音楽を鳴らす"
-
+"指定した時間に音楽を鳴らす→録音"
+import speech_recognition as sr
 import datetime
 import time
 import subprocess
@@ -17,3 +17,8 @@ while i < 2:
         proc = subprocess.run(a2, shell=True)
         time.sleep(3)
         i += 1
+
+r = sr.Recognizer()
+with sr.AudioFile("test3.wav") as source:
+    audio = r.record(source)
+print(r.recognize_google(audio))
