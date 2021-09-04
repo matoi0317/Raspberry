@@ -21,4 +21,5 @@ while i < 2:
 r = sr.Recognizer()
 with sr.AudioFile("test3.wav") as source:
     audio = r.record(source)
-print(r.recognize_google(audio))
+text = r.recognize_google(audio, language="ja-JP")
+print(text)
