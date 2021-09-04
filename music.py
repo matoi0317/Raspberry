@@ -3,7 +3,7 @@
 import datetime
 import time
 import subprocess
-mmm = 40
+mmm = int(input())
 count = 5
 i = 1
 a1 = 'mpg123 -a hw:2,0 free.mp3'
