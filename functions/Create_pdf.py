@@ -1,12 +1,11 @@
 # coding: utf-8
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import mm
-from reportlab.pdfbase.pdfmetrics import registerFont
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 
 def Create_pdf(text, text2):
-    registerFont(TTFont('GenShinGothic',
-                        './data/GenShinGothic-Monospace-Medium.ttf'))
+    pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
 
     file = 'reportlab-test.pdf'  # 出力ファイル名を設定
 
