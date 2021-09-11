@@ -20,7 +20,7 @@ def Create_pdf(text, text2):
 
     paper.setPageSize((w, h))  # 用紙のサイズをセット
     paper.drawString(10, h - 30,  # テキストの書き込み
-                     'ご飯を食べたか'+text)
+                     'ご飯を食べましたか？>>'+text)
     paper.drawString(10, h - 60,  # テキストの書き込み
-                     '起きた時間'+text2)
+                     '起きた時間>>'+text2)
     paper.save()
