@@ -22,5 +22,5 @@ def Create_pdf(text, text2):
     paper.drawString(10, h - 30,  # テキストの書き込み
                      'ご飯は食べましたか？>>'+text)
     paper.drawString(10, h - 60,  # テキストの書き込み
-                     '起きた時間>>'+text2)
+                     '起きた時間は？>>'+text2)
     paper.save()
