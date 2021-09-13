@@ -5,7 +5,7 @@ from firebase_admin import firestore, storage
 cred = credentials.Certificate('karute-81f3c-firebase-adminsdk-na7p6-099144bd72.json')
 firebase_admin.initialize_app(cred, {'storageBucket': 'test'})
 
-bucket = storage.bucket("gs://karute-81f3c.appspot.com")
+bucket = storage.bucket("gs://karute-81f3c.appspot.com","test")
 
 filename = 'eto_tora_banzai.png'
 content_type = 'image/png'
