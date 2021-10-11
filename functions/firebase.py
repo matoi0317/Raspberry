@@ -8,7 +8,7 @@ def send_pdf(pdf):
 
     bucket = storage.bucket()
     filename = pdf
-    content_type = 'application/pdf'
+    content_type = 'appalication/pdf'
     blob = bucket.blob(filename)
     with open(filename, 'rb') as f:
         blob.upload_from_file(f, content_type=content_type)
