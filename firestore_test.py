@@ -13,6 +13,6 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 
 db = firestore.client()
 docs = db.collection("items").document(datetime_format).set({
-    "pdf": "https://firebasestorage.googleapis.com/v0/b/karute-81f3c.appspot.com/o/b.pdf?alt=media&token=ec8a5891-fbab-4d04-89df-9981e9b0aa9f",
+    "pdf": "https://firebasestorage.googleapis.com/v0/b/karute-81f3c.appspot.com/o/reportlab-test.pdf?alt=media&token=ea951670-0221-4274-9cf7-de5a207a58aa",
     "date":datetime_web
 })
