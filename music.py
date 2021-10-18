@@ -5,6 +5,7 @@ import speech_recognition as sr
 import datetime
 import time
 import subprocess
+from subprocess import PIPE
 mmm = int(input())
 count = 5
 i = 1
@@ -41,4 +42,4 @@ print("何時に起きましたか？>>"+text2)
 Create_pdf(text, text2)
 send_pdf("reportlab-test.pdf")
 
-proc = subprocess.run("python firestore_test.py")
+proc = subprocess.run(["python3","firestore_test.py"],stdout=PIPE, stderr=PIPE)
