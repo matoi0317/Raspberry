@@ -1,14 +1,17 @@
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore, storage
+import pyrebase
 
 def send_pdf(pdf):
-    cred = credentials.Certificate('karute-81f3c-firebase-adminsdk-na7p6-099144bd72.json')
-    firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'})
+    config = {
+        "apiKey": "AIzaSyDPeg9J4uFdpXRPeX9LsWibXVda4lstWQk",
+        "authDomain": "karute-81f3c.firebaseapp.com",
+        "databaseURL": "https://karute-81f3c-default-rtdb.firebaseio.com",
+        "projectId": "karute-81f3c",
+        "storageBucket": "karute-81f3c.appspot.com",
+        "messagingSenderId": "369985687952",
+        "appId": "1:369985687952:web:c94ff519f492f40436a315",
+        "measurementId": "G-3ND3M4QHY7"
+    }
 
-    bucket = storage.bucket()
-    filename = pdf
-    content_type = 'application/pdf'
-    blob = bucket.blob(filename)
-    with open(filename, 'rb') as f:
-        blob.upload_from_file(f, content_type=content_type)
+    firebase_storage = pyrebase.initialize_app(config)
+    storage = firebase_storage.storage()
+    storage.child(pdf).put(pdf)
