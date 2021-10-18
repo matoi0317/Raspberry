@@ -1,4 +1,5 @@
 import pyrebase
+from functions.firestore_test import send_store
 
 def send_pdf(pdf):
     config = {
@@ -15,3 +16,5 @@ def send_pdf(pdf):
     firebase_storage = pyrebase.initialize_app(config)
     storage = firebase_storage.storage()
     storage.child(pdf).put(pdf)
+    url = storage.child(pdf).get_url(token=None)
+    send_store(url)
