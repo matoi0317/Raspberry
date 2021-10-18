@@ -3,12 +3,16 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.units import mm
 from reportlab.pdfbase.pdfmetrics import registerFont
 from reportlab.pdfbase.ttfonts import TTFont
+import datetime
+from functions.firebase import send_pdf
 
 def Create_pdf(text, text2):
+    dt_now = datetime.datetime.now()
+    datetime_format = dt_now.strftime("%Y%m%d%H%M%S")
     registerFont(TTFont('GenShinGothic',
                         './data/GenShinGothic-Monospace-Medium.ttf'))
 
-    file = 'reportlab-test.pdf'  # 出力ファイル名を設定
+    file = datetime_format + 'reportlab-test.pdf'  # 出力ファイル名を設定
 
     paper = canvas.Canvas(file)  # 白紙のキャンバスを用意
     paper.saveState()  # 初期化
@@ -24,3 +28,4 @@ def Create_pdf(text, text2):
     paper.drawString(10, h - 60,  # テキストの書き込み
                      '起きた時間は？>>'+text2)
     paper.save()
+    send_pdf(file)
