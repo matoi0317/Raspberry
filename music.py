@@ -40,3 +40,5 @@ print("何時に起きましたか？>>"+text2)
 
 Create_pdf(text, text2)
 send_pdf("reportlab-test.pdf")
+
+proc = subprocess.run("python firestore_test.py")
