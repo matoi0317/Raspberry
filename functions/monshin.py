@@ -23,7 +23,7 @@ def Create_pdf(text1, text2):
     paper.saveState()  # 初期化
     paper.setFont('GenShinGothic', 24)  # フォントを設定
 
-    paper.drawString(60, 770, '問　診　票')  # 書き出し(横位置, 縦位置, 文字)
+    paper.drawString(60, 770, 'わかるって　問　診　票')  # 書き出し(横位置, 縦位置, 文字)
 
     data = [
         ['ふりがな', '   男  ・  女'],
