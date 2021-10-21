@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a80fbecf-1fc8-498e-ba7c-bccd15ccb4df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/monshin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monshin2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monshin.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/monshin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +40,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/functions" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -80,10 +80,10 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state x="303" y="63" key="SettingsEditor/0.23.1440.805@0.23.1440.805" timestamp="1634448231408" />
-    <state x="365" y="184" width="683" height="486" key="find.popup" timestamp="1627103106132">
+    <state x="365" y="184" width="683" height="486" key="find.popup" timestamp="1634802208228">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
-    <state x="365" y="184" width="683" height="486" key="find.popup/0.23.1440.805@0.23.1440.805" timestamp="1627103106132" />
+    <state x="365" y="184" width="683" height="486" key="find.popup/0.23.1440.805@0.23.1440.805" timestamp="1634802208228" />
     <state x="389" y="152" width="670" height="676" key="search.everywhere.popup" timestamp="1627291279893">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
