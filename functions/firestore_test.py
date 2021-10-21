@@ -13,7 +13,7 @@ def send_store(url):
     firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'})
 
     db = firestore.client()
-    docs = db.collection("items").document(datetime_format).set({
+    docs = db.collection("items").orderBy(datetime_format).document(datetime_format).set({
         "pdf": url,
         "date":datetime_web
     })
