@@ -18,6 +18,7 @@ a6 = 'mpg123 -a hw:2,0 medicine2.mp3'
 a7 = 'arecord -D plughw:0,0 -d 10 -f cd medicine.wav'
 a8 = 'mpg123 -a hw:2,0 syoujou2.mp3'
 a9 = 'arecord -D plughw:0,0 -d 10 -f cd syoujou.wav'
+a10 = 'mpg123 -a hw:2,0 end.mp3'
 while i < 2:
     n = datetime.datetime.now()
     nm = n.minute
@@ -28,22 +29,24 @@ while i < 2:
         proc = subprocess.run(a1, shell=True)
         #録音
         proc = subprocess.run(a2, shell=True)
-        time.sleep(1)
+        time.sleep(0)
         #何時に起きましたか？
         proc = subprocess.run(a3, shell=True)
         #録音
         proc = subprocess.run(a4, shell=True)
-        time.sleep(1)
+        time.sleep(0)
         #処方された薬は飲みましたか？
         proc = subprocess.run(a6, shell=True)
         #録音
         proc = subprocess.run(a7, shell=True)
-        time.sleep(1)
+        time.sleep(0)
         #体に何か症状はありますか？
         proc = subprocess.run(a8, shell=True)
         #録音
         proc = subprocess.run(a9, shell=True)
-        time.sleep(1)
+        time.sleep(0)
+        #終了
+        proc = subprocess.run(a10, shell=True)
         i += 1
 
 r = sr.Recognizer()
