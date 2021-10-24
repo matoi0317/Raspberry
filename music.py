@@ -9,14 +9,14 @@ from subprocess import PIPE
 mmm = int(input())
 count = 5
 i = 1
-a1 = 'mpg123 -a hw:2,0 food.mp3'
+a1 = 'mpg123 -a hw:2,0 food2.mp3'
 a2 = 'arecord -D plughw:0,0 -d 10 -f cd food.wav'
-a3 = "mpg123 -a hw:2,0 wakeup.mp3"
+a3 = "mpg123 -a hw:2,0 wakeup2.mp3"
 a4 = 'arecord -D plughw:0,0 -d 10 -f cd wakeup.wav'
-a5 = 'mpg123 -a hw:2,0 start.mp3'
-a6 = 'mpg123 -a hw:2,0 medicine.mp3'
+a5 = 'mpg123 -a hw:2,0 monshin2.mp3'
+a6 = 'mpg123 -a hw:2,0 medicine2.mp3'
 a7 = 'arecord -D plughw:0,0 -d 10 -f cd medicine.wav'
-a8 = 'mpg123 -a hw:2,0 syoujou.mp3'
+a8 = 'mpg123 -a hw:2,0 syoujou2.mp3'
 a9 = 'arecord -D plughw:0,0 -d 10 -f cd syoujou.wav'
 while i < 2:
     n = datetime.datetime.now()
