@@ -26,9 +26,9 @@ def Create_pdf(text1, text2, text3, text4):
     paper.drawString(60, 770, 'わかるって　問　診　票')  # 書き出し(横位置, 縦位置, 文字)
 
     data = [
-        ['ふりがな', '   男  ・  女'],
-        ['氏名', ''],
-        ['生年月日　　　　　　　　　　　　　　　　　　　　年　　　月　　　日生　（満　　　歳）', ''],
+        ['ふりがな', '  女'],
+        ['柴沼纏', ''],
+        ['生年月日　　　　　　　　　　　　　　　　　　2005年　03月　　17日生　（満　　　歳）', ''],
     ]
     table = Table(data, colWidths=(100 * mm, 20 * mm), rowHeights=(7 * mm, 20 * mm, 7 * mm))
     table.setStyle(TableStyle([
