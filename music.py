@@ -6,6 +6,7 @@ import datetime
 import time
 import subprocess
 from subprocess import PIPE
+from functions.serial import getserial
 mmm = int(input())
 count = 5
 i = 1
@@ -68,3 +69,4 @@ print("処方された薬は飲みましたか？>>"+text3)
 print("体に何か症状はありますか？??"+text4)
 
 Create_pdf(text, text2, text3, text4)
+myserial = getserial()
