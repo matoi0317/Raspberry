@@ -33,7 +33,7 @@ pulsecount = 0
 prevpulse = 0
 for i in range(300):
     mes_ch = measure()
-    print 'ch = %2.2f' % mes_ch,'[V]'
+    print('ch = %2.2f' % mes_ch,'[V]')
 
     if (i == 100):
         print('******************* 20sec left')
