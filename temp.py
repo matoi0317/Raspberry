@@ -17,11 +17,12 @@ time.sleep(.1)
 while True:
     # データ取得
     sensordata = sensor.pixels
-
-    # bicubicのデータ
-    fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
-    plt.colorbar()
-
-    # wait代わりに pause
-    plt.pause(.1)
-    plt.clf()
+    print(sensor)
+    #
+    # # bicubicのデータ
+    # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
+    # plt.colorbar()
+    #
+    # # wait代わりに pause
+    # plt.pause(.1)
+    # plt.clf()
