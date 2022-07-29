@@ -1,3 +1,4 @@
+# coding: utf-8
 import time
 import busio
 import board
