@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # I2Cバス、センサーの初期化
 i2c_bus = busio.I2C(board.SCL, board.SDA)
 sensor = adafruit_amg88xx.AMG88XX(i2c_bus, addr=0x69)
-
+total = 0
 # ちょっと待つ
 time.sleep(.1)
 
@@ -21,7 +21,6 @@ for k in range(1):
     #     print(max(i))
 for i in sensordata:
     for j in i:
-        total = 0
         total += j
 print(total/64)
     #
