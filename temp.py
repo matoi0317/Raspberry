@@ -17,7 +17,7 @@ time.sleep(.1)
 while True:
     # データ取得
     sensordata = sensor.pixels
-    print(sensordata)
+    print(max(sensordata))
     #
     # # bicubicのデータ
     # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
