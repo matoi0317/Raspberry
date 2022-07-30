@@ -22,7 +22,8 @@ for k in range(1):
 for i in sensordata:
     for j in i:
         total += j
-print(math.floor(total/64)-10)
+print(math.floor(total/64)-15)
+tempureture = math.floor(total/64)-15
     #
     # # bicubicのデータ
     # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
