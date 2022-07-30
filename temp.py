@@ -19,7 +19,7 @@ for k in range(1):
     sensordata = sensor.pixels
     # for i in sensordata:
     #     print(max(i))
-print(sensordata)
+print(sum(sensordata)/8)
     #
     # # bicubicのデータ
     # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
