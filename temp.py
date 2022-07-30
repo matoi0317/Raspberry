@@ -23,7 +23,7 @@ for i in sensordata:
     for j in i:
         total = 0
         total += j
-        print(total/64)
+print(total/64)
     #
     # # bicubicのデータ
     # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
