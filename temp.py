@@ -21,7 +21,7 @@ for k in range(1):
     #     print(max(i))
 for i in sensordata:
     for j in i:
-        print(max(i))
+        print(j)
     #
     # # bicubicのデータ
     # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
