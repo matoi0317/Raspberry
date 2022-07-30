@@ -14,7 +14,7 @@ sensor = adafruit_amg88xx.AMG88XX(i2c_bus, addr=0x69)
 time.sleep(.1)
 
 # ループ開始
-for i in range(1):
+for k in range(1):
     # データ取得
     sensordata = sensor.pixels
     for i in sensordata:
