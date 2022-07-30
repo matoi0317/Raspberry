@@ -3,7 +3,7 @@ import time
 import busio
 import board
 import adafruit_amg88xx
-
+import math
 import matplotlib.pyplot as plt
 
 # I2Cバス、センサーの初期化
@@ -22,7 +22,7 @@ for k in range(1):
 for i in sensordata:
     for j in i:
         total += j
-print(total/64)
+print(math.floor(total/64)-10)
     #
     # # bicubicのデータ
     # fig = plt.imshow(sensordata, cmap="inferno", interpolation="bicubic")
