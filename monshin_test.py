@@ -21,7 +21,7 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
-    if doc.to_dict()["q1"] == "true":
+    if doc.to_dict()["q1"] == True:
         while i < 2:
             n = datetime.datetime.now()
             nm = n.minute
