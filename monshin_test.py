@@ -18,18 +18,19 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
+    print(doc.tp_dict())
     if doc.to_dict()["q1"] == "true":
         proc = subprocess.run(a5, shell=True)
-        proc = subprocess.run(a1, shell=True)
-        #録音
-        proc = subprocess.run(a2, shell=True)
-        time.sleep(0)
+        # proc = subprocess.run(a1, shell=True)
+        # #録音
+        # proc = subprocess.run(a2, shell=True)
+        # time.sleep(0)
 
-r = sr.Recognizer()
-with sr.AudioFile("food.wav") as source:
-    audio = r.record(source)
-text = r.recognize_google(audio, language="ja-JP")
-print(text)
+# r = sr.Recognizer()
+# with sr.AudioFile("food.wav") as source:
+#     audio = r.record(source)
+# text = r.recognize_google(audio, language="ja-JP")
+# print(text)
 
 # # coding: utf-8
 # from functions.monshin import Create_pdf
