@@ -1,7 +1,7 @@
 # coding: utf-8
 import firebase_admin
 from firebase_admin import credentials
-from firebase_admin import firestore, storage
+from google.cloud import firestore, storage
 db = firestore.client()
 docs = db.collection("users").get()
 for doc in docs:
