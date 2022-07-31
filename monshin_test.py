@@ -9,6 +9,7 @@ import time
 
 a1 = 'mpg123 -a hw:0,0 food2.mp3'
 a2 = 'arecord -D plughw:2,0 -d 10 -f cd food.wav'
+a5 = 'mpg123 -a hw:0,0 monshin2.mp3'
 
 args = sys.argv
 user_id = args[1]
@@ -18,6 +19,7 @@ db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
     if doc.to_dict()["q1"] == "true":
+        proc = subprocess.run(a5, shell=True)
         proc = subprocess.run(a1, shell=True)
         #録音
         proc = subprocess.run(a2, shell=True)
