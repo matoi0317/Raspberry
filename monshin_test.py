@@ -2,6 +2,9 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore, storage
+
+cred = credentials.Certificate('karute-81f3c-firebase-adminsdk-na7p6-099144bd72.json')
+firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'})
 db = firestore.client()
 docs = db.collection("users").get()
 for doc in docs:
