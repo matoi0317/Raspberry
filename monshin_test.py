@@ -18,7 +18,7 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
-    print(doc.tp_dict())
+    print(doc.to_dict())
     if doc.to_dict()["q1"] == "true":
         proc = subprocess.run(a5, shell=True)
         # proc = subprocess.run(a1, shell=True)
