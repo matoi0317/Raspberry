@@ -8,7 +8,7 @@ import subprocess
 import time
 
 a1 = 'mpg123 -a hw:0,0 food2.mp3'
-a2 = 'arecord -D plughw:0,0 -d 10 -f cd food.wav'
+a2 = 'arecord -D plughw:2,0 -d 10 -f cd food.wav'
 
 args = sys.argv
 user_id = args[1]
