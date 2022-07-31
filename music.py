@@ -7,6 +7,10 @@ import time
 import subprocess
 from subprocess import PIPE
 from functions.serial import getserial
+import sys
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore, storage
 mmm = int(input())
 count = 5
 i = 1

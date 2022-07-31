@@ -1,7 +1,7 @@
 import pyrebase
 from functions.firestore_test import send_store
 
-def send_pdf(pdf):
+def send_pdf(pdf, user_id):
     config = {
         "apiKey": "AIzaSyDPeg9J4uFdpXRPeX9LsWibXVda4lstWQk",
         "authDomain": "karute-81f3c.firebaseapp.com",
@@ -17,4 +17,4 @@ def send_pdf(pdf):
     storage = firebase_storage.storage()
     storage.child(pdf).put(pdf)
     url = storage.child(pdf).get_url(token=None)
-    send_store(url)
+    send_store(url, user_id)
