@@ -11,7 +11,7 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
-    print(doc.to_dict())
+    print(doc["q1"].to_dict())
 
 
 # # coding: utf-8
