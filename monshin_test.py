@@ -9,7 +9,7 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").document("id").get()
 for doc in docs:
-    print(doc)
+    print(doc.to_dict())
 args = sys.argv
 id = args[1]
 
