@@ -3,6 +3,12 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore, storage
 import sys
+import speech_recognition as sr
+import subprocess
+import time
+
+a1 = 'mpg123 -a hw:0,0 food2.mp3'
+a2 = 'arecord -D plughw:0,0 -d 10 -f cd food.wav'
 
 args = sys.argv
 user_id = args[1]
@@ -12,9 +18,16 @@ db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
     if doc.to_dict()["q1"] == "true":
-        print("true")
-    else:
-        print("false")
+        proc = subprocess.run(a1, shell=True)
+        #録音
+        proc = subprocess.run(a2, shell=True)
+        time.sleep(0)
+
+r = sr.Recognizer()
+with sr.AudioFile("food.wav") as source:
+    audio = r.record(source)
+text = r.recognize_google(audio, language="ja-JP")
+print(text)
 
 # # coding: utf-8
 # from functions.monshin import Create_pdf
