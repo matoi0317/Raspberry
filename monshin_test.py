@@ -8,7 +8,7 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").get()
 for doc in docs:
-    print(doc.to_dict())
+    print(doc[1])
 # # coding: utf-8
 # from functions.monshin import Create_pdf
 # from functions.firebase import send_pdf
