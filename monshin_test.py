@@ -4,14 +4,14 @@ from firebase_admin import credentials
 from firebase_admin import firestore, storage
 import sys
 
+args = sys.argv
+user_id = args[1]
 cred = credentials.Certificate('karute-81f3c-firebase-adminsdk-na7p6-099144bd72.json')
 firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'})
 db = firestore.client()
-docs = db.collection("users").document("id").get()
+docs = db.collection("users").where("id","==",user_id).get()
 for doc in docs:
     print(doc.to_dict())
-args = sys.argv
-id = args[1]
 
 
 # # coding: utf-8
