@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a80fbecf-1fc8-498e-ba7c-bccd15ccb4df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/benpi.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fever.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/henka.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodo.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyo.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onaka.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monshin_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/monshin_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +45,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/functions" />
       <recent name="$PROJECT_DIR$/data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">

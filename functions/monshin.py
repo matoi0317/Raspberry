@@ -12,7 +12,7 @@ import datetime
 from functions.firebase import send_pdf
 import sys
 
-def Create_pdf(text1, text2, text3, text4,user_id):
+def Create_pdf(text1, text2, text3, text4,text5,text6,text7,text8,text9,user_id):
     dt_now = datetime.datetime.now()
     datetime_format = dt_now.strftime("%Y%m%d%H%M%S")
     registerFont(TTFont('GenShinGothic',
@@ -50,6 +50,11 @@ def Create_pdf(text1, text2, text3, text4,user_id):
         ['何時に起きましたか？', text2],
         ['処方された薬は飲みましたか？', text3],
         ['体に何かしらの症状はありますか？', text4],
+        ['熱はありますか？', text5],
+        ['喉の痛みはありますか？', text6],
+        ['排尿はしましたか？', text7],
+        ['便秘気味ですか？', text8],
+        ['お腹の痛みはありますか？', text9],
     ]
     table = Table(data, colWidths=(60 * mm, 100 * mm), rowHeights=7.5 * mm)
     table.setStyle(TableStyle([
