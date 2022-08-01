@@ -177,9 +177,12 @@ if doc.to_dict()["q7"] == True:
 else:
     text8 = ""
 if doc.to_dict()["q8"] == True:
+    print("onaka--------")
     with sr.AudioFile("onaka2.wav") as source:
         audio9 = r.record(source)
+        print("audio999999")
     text9 = r.recognize_google(audio9, language="ja-JP")
+    print(text9)
 else:
     text9 = ""
 
