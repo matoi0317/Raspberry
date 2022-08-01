@@ -135,19 +135,19 @@ with sr.AudioFile("syoujou.wav") as source:
 text4 = r.recognize_google(audio4, language="ja-JP")
 with sr.AudioFile("fever.wav") as source:
     audio5 = r.record(source)
-text5 = r.recognize_google(audio4, language="ja-JP")
+text5 = r.recognize_google(audio5, language="ja-JP")
 with sr.AudioFile("nodo.wav") as source:
     audio6 = r.record(source)
-text6 = r.recognize_google(audio4, language="ja-JP")
+text6 = r.recognize_google(audio6, language="ja-JP")
 with sr.AudioFile("nyo.wav") as source:
     audio7 = r.record(source)
-text7 = r.recognize_google(audio4, language="ja-JP")
+text7 = r.recognize_google(audio7, language="ja-JP")
 with sr.AudioFile("benpi.wav") as source:
     audio8 = r.record(source)
-text8 = r.recognize_google(audio4, language="ja-JP")
+text8 = r.recognize_google(audio8, language="ja-JP")
 with sr.AudioFile("onaka.wav") as source:
     audio9 = r.record(source)
-text9 = r.recognize_google(audio4, language="ja-JP")
+text9 = r.recognize_google(audio9, language="ja-JP")
 
 
 Create_pdf(text, text2,text3,text4,text5,text6,text7,text8,text9,int(user_id))
