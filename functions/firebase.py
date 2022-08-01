@@ -15,8 +15,8 @@ def send_pdf(pdf, user_id):
         "appId": "1:369985687952:web:c94ff519f492f40436a315",
         "measurementId": "G-3ND3M4QHY7"
     }
-    firebase_storage = pyrebase.initialize_app(config)
-    storage = firebase_storage.storage()
+    # firebase_storage = pyrebase.initialize_app(config)
+    # storage = firebase_storage.storage()
     storage.child(pdf).put(pdf)
     url = storage.child(pdf).get_url(token=None)
     send_store(url, user_id)
