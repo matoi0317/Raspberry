@@ -123,24 +123,29 @@ while i < 2:
 
 
 r = sr.Recognizer()
+if doc.to_dict()["q1"] == True:
+    with sr.AudioFile("medicine.wav") as source:
+        audio3 = r.record(source)
+    text3 = r.recognize_google(audio3, language="ja-JP")
+    print(text3)
+else:
+    text3 = ""
 if doc.to_dict()["q2"] == True:
+    print("food-----")
     with sr.AudioFile("food.wav") as source:
+        print("with-----")
         audio = r.record(source)
     text = r.recognize_google(audio, language="ja-JP")
+    print(text)
 else:
     text = ""
 if doc.to_dict()["q3"] == True:
     with sr.AudioFile("wakeup.wav") as source:
         audio2 = r.record(source)
     text2 = r.recognize_google(audio2, language="ja-JP")
+    print(text2)
 else:
     text2 = ""
-if doc.to_dict()["q1"] == True:
-    with sr.AudioFile("medicine.wav") as source:
-        audio3 = r.record(source)
-    text3 = r.recognize_google(audio3, language="ja-JP")
-else:
-    text3 = ""
 if doc.to_dict()["q9"] == True:
     with sr.AudioFile("syoujou.wav") as source:
         audio4 = r.record(source)
