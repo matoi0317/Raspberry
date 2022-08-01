@@ -83,5 +83,5 @@ text3 = r.recognize_google(audio3, language="ja-JP")
 with sr.AudioFile("syoujou.wav") as source:
     audio4 = r.record(source)
 text4 = r.recognize_google(audio4, language="ja-JP")
-Create_pdf(text, text2,text3,text4,user_id)
+Create_pdf(text, text2,text3,text4,int(user_id))
 
