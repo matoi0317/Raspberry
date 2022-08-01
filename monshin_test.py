@@ -59,9 +59,6 @@ while i < 2:
                 proc = subprocess.run(a7, shell=True)
                 time.sleep(0)
                 r = sr.Recognizer()
-                with sr.AudioFile("medicine.wav") as source:
-                    audio3 = r.record(source)
-                text3 = r.recognize_google(audio3, language="ja-JP")
             else:
                 text3 = ""
             if doc.to_dict()["q2"] == True:
@@ -69,10 +66,6 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a2, shell=True)
                 time.sleep(0)
-                r = sr.Recognizer()
-                with sr.AudioFile("food.wav") as source:
-                    audio = r.record(source)
-                text = r.recognize_google(audio, language="ja-JP")
             else:
                 text = ""
             if doc.to_dict()["q3"] == True:
@@ -80,10 +73,6 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a4, shell=True)
                 time.sleep(0)
-                r = sr.Recognizer()
-                with sr.AudioFile("wakeup.wav") as source:
-                    audio2 = r.record(source)
-                text2 = r.recognize_google(audio2, language="ja-JP")
             else:
                 text2 = ""
             if doc.to_dict()["q4"] == True:
@@ -92,9 +81,6 @@ while i < 2:
                 proc = subprocess.run(a11, shell=True)
                 time.sleep(0)
                 r = sr.Recognizer()
-                with sr.AudioFile("fever2.wav") as source:
-                    audio5 = r.record(source)
-                text5 = r.recognize_google(audio5, language="ja-JP")
             else:
                 text5 = ""
             if doc.to_dict()["q5"] == True:
@@ -102,10 +88,6 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a13, shell=True)
                 time.sleep(0)
-                r = sr.Recognizer()
-                with sr.AudioFile("nodo2.wav") as source:
-                    audio6 = r.record(source)
-                text6 = r.recognize_google(audio6, language="ja-JP")
             else:
                 text6 = ""
             if doc.to_dict()["q6"] == True:
@@ -113,10 +95,6 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a15, shell=True)
                 time.sleep(0)
-                r = sr.Recognizer()
-                with sr.AudioFile("nyo2.wav") as source:
-                    audio7 = r.record(source)
-                text7 = r.recognize_google(audio7, language="ja-JP")
             else:
                 text7 = ""
             if doc.to_dict()["q7"] == True:
@@ -124,9 +102,6 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a17, shell=True)
                 time.sleep(0)
-                with sr.AudioFile("benpi2.wav") as source:
-                    audio8 = r.record(source)
-                text8 = r.recognize_google(audio8, language="ja-JP")
             else:
                 text8 = ""
             if doc.to_dict()["q8"] == True:
@@ -134,9 +109,6 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a19, shell=True)
                 time.sleep(0)
-                with sr.AudioFile("onaka2.wav") as source:
-                    audio9 = r.record(source)
-                text9 = r.recognize_google(audio9, language="ja-JP")
             else:
                 text9 = ""
             if doc.to_dict()["q9"] == True:
@@ -144,44 +116,40 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a9, shell=True)
                 time.sleep(0)
-                r = sr.Recognizer()
-                with sr.AudioFile("syoujou.wav") as source:
-                    audio4 = r.record(source)
-                text4 = r.recognize_google(audio4, language="ja-JP")
             else:
                 text4 = ""
         i += 1
 
 
 
-# r = sr.Recognizer()
-# with sr.AudioFile("food.wav") as source:
-#     audio = r.record(source)
-# text = r.recognize_google(audio, language="ja-JP")
-# with sr.AudioFile("wakeup.wav") as source:
-#     audio2 = r.record(source)
-# text2 = r.recognize_google(audio2, language="ja-JP")
-# with sr.AudioFile("medicine.wav") as source:
-#     audio3 = r.record(source)
-# text3 = r.recognize_google(audio3, language="ja-JP")
-# with sr.AudioFile("syoujou.wav") as source:
-#     audio4 = r.record(source)
-# text4 = r.recognize_google(audio4, language="ja-JP")
-# with sr.AudioFile("fever.wav") as source:
-#     audio5 = r.record(source)
-# text5 = r.recognize_google(audio5, language="ja-JP")
-# with sr.AudioFile("nodo.wav") as source:
-#     audio6 = r.record(source)
-# text6 = r.recognize_google(audio6, language="ja-JP")
-# with sr.AudioFile("nyo.wav") as source:
-#     audio7 = r.record(source)
-# text7 = r.recognize_google(audio7, language="ja-JP")
-# with sr.AudioFile("benpi.wav") as source:
-#     audio8 = r.record(source)
-# text8 = r.recognize_google(audio8, language="ja-JP")
-# with sr.AudioFile("onaka.wav") as source:
-#     audio9 = r.record(source)
-# text9 = r.recognize_google(audio9, language="ja-JP")
+r = sr.Recognizer()
+with sr.AudioFile("food.wav") as source:
+    audio = r.record(source)
+text = r.recognize_google(audio, language="ja-JP")
+with sr.AudioFile("wakeup.wav") as source:
+    audio2 = r.record(source)
+text2 = r.recognize_google(audio2, language="ja-JP")
+with sr.AudioFile("medicine.wav") as source:
+    audio3 = r.record(source)
+text3 = r.recognize_google(audio3, language="ja-JP")
+with sr.AudioFile("syoujou.wav") as source:
+    audio4 = r.record(source)
+text4 = r.recognize_google(audio4, language="ja-JP")
+with sr.AudioFile("fever.wav") as source:
+    audio5 = r.record(source)
+text5 = r.recognize_google(audio5, language="ja-JP")
+with sr.AudioFile("nodo.wav") as source:
+    audio6 = r.record(source)
+text6 = r.recognize_google(audio6, language="ja-JP")
+with sr.AudioFile("nyo.wav") as source:
+    audio7 = r.record(source)
+text7 = r.recognize_google(audio7, language="ja-JP")
+with sr.AudioFile("benpi.wav") as source:
+    audio8 = r.record(source)
+text8 = r.recognize_google(audio8, language="ja-JP")
+with sr.AudioFile("onaka.wav") as source:
+    audio9 = r.record(source)
+text9 = r.recognize_google(audio9, language="ja-JP")
 
 
 Create_pdf(text, text2,text3,text4,text5,text6,text7,text8,text9,int(user_id))

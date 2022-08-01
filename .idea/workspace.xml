@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a80fbecf-1fc8-498e-ba7c-bccd15ccb4df" name="Default Changelist" comment="" />
+    <list default="true" id="a80fbecf-1fc8-498e-ba7c-bccd15ccb4df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monshin_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/monshin_test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,9 +63,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="695" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1659391320227">
+    <state x="695" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1659392465159">
       <screen x="0" y="23" width="1440" height="805" />
     </state>
-    <state x="695" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.805@0.23.1440.805" timestamp="1659391320227" />
+    <state x="695" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.805@0.23.1440.805" timestamp="1659392465159" />
   </component>
 </project>
