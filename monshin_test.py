@@ -24,19 +24,19 @@ a8 = 'mpg123 -a hw:2,0 syoujou2.mp3'
 a9 = 'arecord -D plughw:0,0 -d 10 -f cd syoujou.wav'
 #熱?
 a10 = 'mpg123 -a hw:2,0 fever.mp3'
-a11 = 'arecord -D plughw:0,0 -d 10 -f cd fever.wav'
+a11 = 'arecord -D plughw:0,0 -d 10 -f cd fever2.wav'
 #喉
 a12 = 'mpg123 -a hw:2,0 nodo.mp3'
-a13 = 'arecord -D plughw:0,0 -d 10 -f cd nodo.wav'
+a13 = 'arecord -D plughw:0,0 -d 10 -f cd nodo2.wav'
 #排尿
 a14 = 'mpg123 -a hw:2,0 nyo.mp3'
-a15 = 'arecord -D plughw:0,0 -d 10 -f cd nyo.wav'
+a15 = 'arecord -D plughw:0,0 -d 10 -f cd nyo2.wav'
 #便秘
 a16 = 'mpg123 -a hw:2,0 benpi.mp3'
-a17 = 'arecord -D plughw:0,0 -d 10 -f cd benpi.wav'
+a17 = 'arecord -D plughw:0,0 -d 10 -f cd benpi2.wav'
 #お腹
 a18 = 'mpg123 -a hw:2,0 onaka.mp3'
-a19 = 'arecord -D plughw:0,0 -d 10 -f cd onaka.wav'
+a19 = 'arecord -D plughw:0,0 -d 10 -f cd onaka2.wav'
 a20 = 'mpg123 -a hw:0,0 end.mp3'
 
 mmm = int(input())
@@ -92,7 +92,7 @@ while i < 2:
                 proc = subprocess.run(a11, shell=True)
                 time.sleep(0)
                 r = sr.Recognizer()
-                with sr.AudioFile("fever.wav") as source:
+                with sr.AudioFile("fever2.wav") as source:
                     audio5 = r.record(source)
                 text5 = r.recognize_google(audio5, language="ja-JP")
             else:
@@ -103,7 +103,7 @@ while i < 2:
                 proc = subprocess.run(a13, shell=True)
                 time.sleep(0)
                 r = sr.Recognizer()
-                with sr.AudioFile("nodo.wav") as source:
+                with sr.AudioFile("nodo2.wav") as source:
                     audio6 = r.record(source)
                 text6 = r.recognize_google(audio6, language="ja-JP")
             else:
@@ -114,7 +114,7 @@ while i < 2:
                 proc = subprocess.run(a15, shell=True)
                 time.sleep(0)
                 r = sr.Recognizer()
-                with sr.AudioFile("nyo.wav") as source:
+                with sr.AudioFile("nyo2.wav") as source:
                     audio7 = r.record(source)
                 text7 = r.recognize_google(audio7, language="ja-JP")
             else:
@@ -124,7 +124,7 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a17, shell=True)
                 time.sleep(0)
-                with sr.AudioFile("benpi.wav") as source:
+                with sr.AudioFile("benpi2.wav") as source:
                     audio8 = r.record(source)
                 text8 = r.recognize_google(audio8, language="ja-JP")
             else:
@@ -134,7 +134,7 @@ while i < 2:
                 # 録音
                 proc = subprocess.run(a19, shell=True)
                 time.sleep(0)
-                with sr.AudioFile("onaka.wav") as source:
+                with sr.AudioFile("onaka2.wav") as source:
                     audio9 = r.record(source)
                 text9 = r.recognize_google(audio9, language="ja-JP")
             else:
