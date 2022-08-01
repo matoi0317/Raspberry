@@ -21,11 +21,11 @@ firebase_admin.initialize_app(cred, {'storageBucket': 'karute-81f3c.appspot.com'
 db = firestore.client()
 docs = db.collection("users").where("id","==",int(user_id)).get()
 for doc in docs:
-    while i < 2:
-        n = datetime.datetime.now()
-        nm = n.minute
-        if mmm == nm:
-            if doc.to_dict()["q1"] == True:
+    if doc.to_dict()["q1"] == True:
+        while i < 2:
+            n = datetime.datetime.now()
+            nm = n.minute
+            if mmm == nm:
                 # 問診の時間です
                 proc = subprocess.run(a5, shell=True)
                 # ご飯は食べましたか？
