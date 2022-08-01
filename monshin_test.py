@@ -8,9 +8,9 @@ import subprocess
 import time
 import datetime
 
-a1 = 'mpg123 -a hw:0,0 food2.mp3'
-a2 = 'arecord -D plughw:2,0 -d 10 -f cd food.wav'
-a5 = 'mpg123 -a hw:0,0 monshin2.mp3'
+a1 = 'mpg123 -a hw:2,0 food2.mp3'
+a2 = 'arecord -D plughw:0,0 -d 10 -f cd food.wav'
+a5 = 'mpg123 -a hw:2,0 monshin2.mp3'
 
 mmm = int(input())
 i = 1
