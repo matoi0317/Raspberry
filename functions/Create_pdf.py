@@ -6,7 +6,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 import datetime
 from functions.firebase import send_pdf
 
-def Create_pdf(text, text2):
+def Create_pdf(text, text2,user_id):
     dt_now = datetime.datetime.now()
     datetime_format = dt_now.strftime("%Y%m%d%H%M%S")
     registerFont(TTFont('GenShinGothic',
