@@ -124,8 +124,11 @@ while i < 2:
 
 r = sr.Recognizer()
 if doc.to_dict()["q1"] == True:
+    print("madi-------")
     with sr.AudioFile("medicine.wav") as source:
+        print("medi--with-----")
         audio3 = r.record(source)
+        print("audio----medi---")
     text3 = r.recognize_google(audio3, language="ja-JP")
     print(text3)
 else:
