@@ -22,4 +22,5 @@ def send_pdf(pdf, user_id):
     aaa = blob.upload_from_filename(pdf)
     print("AAA:", aaa)
     # url = storage.child(pdf).get_url(token=None)
-    # send_store(url, user_id)
+    url = "https://firebasestorage.googleapis.com/v0/b/karute-81f3c.appspot.com/o/"+pdf+"?alt=media"
+    send_store(url, user_id)
