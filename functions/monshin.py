@@ -13,7 +13,6 @@ from functions.firebase import send_pdf
 import sys
 
 def Create_pdf(text1, text2, text3, text4,user_id):
-    args = sys.args
     dt_now = datetime.datetime.now()
     datetime_format = dt_now.strftime("%Y%m%d%H%M%S")
     registerFont(TTFont('GenShinGothic',
