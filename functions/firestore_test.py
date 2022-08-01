@@ -12,5 +12,5 @@ def send_store(url, user_id):
     docs = db.collection("items").document(datetime_format).set({
         "pdf": url,
         "date":datetime_web,
-        "user_id":user_id
+        "user_id":str(user_id)
     })
