@@ -12,7 +12,7 @@ import datetime
 from functions.firebase import send_pdf
 import sys
 
-def Create_pdf(text1, text2, text3, text4,text5,text6,text7,text8,text9,user_id):
+def Create_pdf(text1, text2, text3, text4,text5,text6,text7,text8,text9,user_id,tempureture):
     dt_now = datetime.datetime.now()
     datetime_format = dt_now.strftime("%Y%m%d%H%M%S")
     registerFont(TTFont('GenShinGothic',
@@ -68,4 +68,4 @@ def Create_pdf(text1, text2, text3, text4,text5,text6,text7,text8,text9,user_id)
 
     # 1枚目終了
     paper.save()
-    send_pdf(file, user_id)
+    send_pdf(file, user_id,tempureture)

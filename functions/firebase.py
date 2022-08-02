@@ -4,7 +4,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore, storage
 
-def send_pdf(pdf, user_id):
+def send_pdf(pdf, user_id,tempureture):
     config = {
         "apiKey": "AIzaSyDPeg9J4uFdpXRPeX9LsWibXVda4lstWQk",
         "authDomain": "karute-81f3c.firebaseapp.com",
@@ -23,4 +23,4 @@ def send_pdf(pdf, user_id):
     print("AAA:", aaa)
     # url = storage.child(pdf).get_url(token=None)
     url = "https://firebasestorage.googleapis.com/v0/b/karute-81f3c.appspot.com/o/"+pdf+"?alt=media"
-    send_store(url, user_id)
+    send_store(url, user_id,tempureture)

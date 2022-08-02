@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore, storage
 import datetime
 
-def send_store(url, user_id):
+def send_store(url, user_id,tempureture):
     dt_now = datetime.datetime.now()
     datetime_format = dt_now.strftime("%Y%m%d%H%M%S")
     datetime_web = dt_now.strftime("%Y年%m月%d日%H時%M分")
@@ -12,5 +12,6 @@ def send_store(url, user_id):
     docs = db.collection("items").document(datetime_format).set({
         "pdf": url,
         "date":datetime_web,
-        "user_id":str(user_id)
+        "user_id":str(user_id),
+        "temp":tempureture
     })

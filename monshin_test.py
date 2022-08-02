@@ -8,6 +8,10 @@ import subprocess
 import time
 import datetime
 from functions.monshin import Create_pdf
+import busio
+import board
+import adafruit_amg88xx
+import math
 
 #ご飯
 a1 = 'mpg123 -a hw:2,0 food2.mp3'
@@ -58,67 +62,68 @@ while i < 2:
                 proc = subprocess.run(a6, shell=True)
                 proc = subprocess.run(a7, shell=True)
                 time.sleep(0)
-                r = sr.Recognizer()
-            else:
-                text3 = ""
             if doc.to_dict()["q2"] == True:
                 proc = subprocess.run(a1, shell=True)
                 # 録音
                 proc = subprocess.run(a2, shell=True)
                 time.sleep(0)
-            else:
-                text = ""
             if doc.to_dict()["q3"] == True:
                 proc = subprocess.run(a3, shell=True)
                 # 録音
                 proc = subprocess.run(a4, shell=True)
                 time.sleep(0)
-            else:
-                text2 = ""
             if doc.to_dict()["q4"] == True:
                 proc = subprocess.run(a10, shell=True)
                 # 録音
                 proc = subprocess.run(a11, shell=True)
                 time.sleep(0)
                 r = sr.Recognizer()
-            else:
-                text5 = ""
             if doc.to_dict()["q5"] == True:
                 proc = subprocess.run(a12, shell=True)
                 # 録音
                 proc = subprocess.run(a13, shell=True)
                 time.sleep(0)
-            else:
-                text6 = ""
             if doc.to_dict()["q6"] == True:
                 proc = subprocess.run(a14, shell=True)
                 # 録音
                 proc = subprocess.run(a15, shell=True)
                 time.sleep(0)
-            else:
-                text7 = ""
             if doc.to_dict()["q7"] == True:
                 proc = subprocess.run(a16, shell=True)
                 # 録音
                 proc = subprocess.run(a17, shell=True)
                 time.sleep(0)
-            else:
-                text8 = ""
             if doc.to_dict()["q8"] == True:
                 proc = subprocess.run(a18, shell=True)
                 # 録音
                 proc = subprocess.run(a19, shell=True)
                 time.sleep(0)
-            else:
-                text9 = ""
             if doc.to_dict()["q9"] == True:
                 proc = subprocess.run(a8, shell=True)
                 # 録音
                 proc = subprocess.run(a9, shell=True)
                 time.sleep(0)
-            else:
-                text4 = ""
+
         i += 1
+
+# I2Cバス、センサーの初期化
+i2c_bus = busio.I2C(board.SCL, board.SDA)
+sensor = adafruit_amg88xx.AMG88XX(i2c_bus, addr=0x69)
+total = 0
+# ちょっと待つ
+time.sleep(.1)
+
+# ループ開始
+for k in range(1):
+    # データ取得
+    sensordata = sensor.pixels
+    # for i in sensordata:
+    #     print(max(i))
+for i in sensordata:
+    for j in i:
+        total += j
+print(math.floor(total/64)-15)
+tempureture = math.floor(total/64)-15
 
 
 
@@ -189,5 +194,5 @@ if doc.to_dict()["q8"] == True:
 else:
     text9 = ""
 
-Create_pdf(text, text2,text3,text4,text5,text6,text7,text8,text9,int(user_id))
+Create_pdf(text, text2,text3,text4,text5,text6,text7,text8,text9,int(user_id),tempureture)
 
