@@ -15,3 +15,6 @@ def send_store(url, user_id,tempureture):
         "user_id":str(user_id),
         "temp":tempureture
     })
+    db.collection("users").document(user_id).uodate({
+        "temp": tempureture
+    })
